@@ -24,8 +24,11 @@ Route::view('/payout-rates', 'payout-rates')->name('home.payout-rates');
 Route::view('/faq', 'faq')->name('home.faq');
 
 
-// Route::get('/blog/{article}', [ArticleController::class, 'show']);
+Route::resource('short', ShorterController::class)->except('show');
 
+Route::get('/{shorter}', [ShorterController::class, 'show'])
+->where('shorter','\d\-[\d\w]*')  //check url before do any actions
+->name('short.show');
 
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('home');
@@ -64,7 +67,5 @@ Route::middleware('auth')->group(function () {
 
 
 
-Route::resource('short', ShorterController::class)->except('show');
 
 require __DIR__ . '/auth.php';
-Route::get('/{shorter}', [ShorterController::class, 'show'])->name('short.show');
