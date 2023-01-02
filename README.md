@@ -18,7 +18,8 @@ Also, there should be a Login mechanism (but no Register) for the author to writ
 - Manage (meaning, create/update/delete) categories
 - Manage tags
 - Manage articles 
-- For Auth Starter Kit, use [Laravel Breeze](https://github.com/laravel/breeze) (Tailwind) or [Laravel UI](https://github.com/laravel/ui) (Bootstrap) - that starter kit will have some design, which is enough: the design is irrelevant for accomplishing the task
+- For Auth Starter Kit, use [Laravel Breeze](https://github.com/laravel/breeze) (Tailwind) or
+ [Laravel UI](https://github.com/laravel/ui) (Bootstrap) - that starter kit will have some design, which is enough: the design is irrelevant for accomplishing the task
 
 
 **DB Structure:**
